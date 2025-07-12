@@ -23,7 +23,7 @@ function checkPasswordStrength(password){
     if(!/[a-z]/.test(password)) return "Where are the lowercase letters buddy";
     if(!/[A-Z]/.test(password)) return "Where are the UPPERCASE letters buddy";
     if(!/[0-9]/.test(password)) return "Forgot your numbers? What are we 8 years old?";
-    if(!/[a-zA-z0-9]/.test(password)) return "Where are the lowercase letters buddy";
+    if(!/[^a-zA-z0-9]/.test(password)) return "Special Characters?";
     if(password.length <= 12) return "now we getting somewhere pal!"
     return "This password is certified not completely garbage!"
 }
